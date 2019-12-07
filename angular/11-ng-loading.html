@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="bower_components/angular/angular.js"></script>
+  </head>
+  <body ng-app ng-init="imgUrl='./images/2.jpg'" ng-cloak>
+    <!-- <img ng-src="{{imgUrl}}" alt="">
+    <a ng-href="{{imgUrl}}">跳转到图片</a> -->
+
+    <select class="" ng-model="myVar" name="">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <div ng-switch="myVar">
+      <div ng-switch-when="1">
+        <h1>111111</h1>
+        <p>1111111111</p>
+      </div>
+      <div ng-switch-when="2">
+        <h1>2222222222</h1>
+        <p>2222222222222</p>
+      </div>
+      <div ng-switch-when="3">
+        <h1>333333333333</h1>
+        <p>3333333333</p>
+      </div>
+    </div>
+
+  </body>
+</html>

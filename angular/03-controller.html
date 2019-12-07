@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-app="HelloApp">
+<table ng-controller="worldController">
+    <tr>
+        <td>用户名</td>
+        <td><input type="text" ng-model="user.username"></td>
+    </tr>
+    <tr>
+        <td>密码</td>
+        <td><input type="password" ng-model="user.password"></td>
+    </tr>
+    <tr>
+        <td><input type="button" ng-click="login()" value="登录"></td>
+        <td>{{message}}</td>
+    </tr>
+</table>
+<script>
+   //创建一个模块
+   var app = angular.module("HelloApp",[]);
+   //为模块创建控制器
+    app.controller('worldController',['$scope',function($scope){
+        $scope.username='';
+        $scope.password='';
+        //数据
+        $scope.user =  {
+            username:"",
+            password:""
+        };
+        //行为数据
+        $scope.login = function(){
+            //因为数据的变化时双向的同步，所有界面的值变化会同步到$scope,
+            //user上
+            console.log($scope.user);
+        };
+
+        //请输入用户名，验证格式
+        $scope.message = '请输入用户名';
+        //监视模型的变化，做出相应的动作
+        $scope.$watch('user.username',function(now,old){
+            //当user.username发生变化时触发这个函数
+            console.log('now is '+now);
+            console.log('old is '+old);
+
+            if(now){
+                if(now.length<7){
+                    $scope.message = '输入格式不合法'; //直接显示错误
+                }else{
+                    $scope.message = '';
+                }
+            }else{
+                $scope.message = '请输入用户名';
+            }
+        })
+
+        //angular 基本基本不用操作dom，如果必要，可是使用angular提供的jqlite
+        //angular.element('body') ; 操作dom
+   }]);
+</script>
+</body>
+</html>

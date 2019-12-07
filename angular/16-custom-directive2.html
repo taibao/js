@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <style>
+    .btn-primary{
+        border:none;
+        background: #0b9faf;
+        width:100px;
+        height:35px;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body ng-app = "demoApp" ng-controller="DemoController">
+  <breadcrumb data="{{pathData}}"></breadcrumb>
+<breadcrumb data="{{pathData2}}"></breadcrumb>
+</body>
+<script>
+    /**
+    demoApp
+    */
+    //使用自定义的模块才可以依赖别的包里面定义的模块，
+    //angular定义的默认模块没有依赖任何包
+    var demoApp = angular.module('demoApp',[]);
+
+    demoApp.controller('DemoController',['$scope',function($scope){
+      $scope.pathData={
+        home:"#",
+        itcast:"#",
+        bbs:"#",
+        baidu:"https://www.baidu.com"
+      };
+      $scope.pathData2={
+        home:"#",
+        itcast:"#",
+        bbs:"#",
+        baidu:"https://www.baidu.com"
+      };
+    }]);
+    //第一个参数是指令的名字，第二个参数应该使用一个数组，最后一个元素为一个函数
+    demoApp.directive('breadcrumb',[function(){
+      //该函数应该返回一个指令对象
+      return {
+        //指定当前指令类型什么样的
+        scope:{},
+        // restrict:'A', //E表示该指令是一个element
+        templateUrl:'tmpls/breadcrumb.html',
+        replace:true,
+        link:function(scope,element,attributes){
+          scope.data = JSON.parse(attributes.data);
+          console.log(scope.data);
+        }
+      };
+    }]);
+
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-app = "myApp">
+<ul ng-controller="ListController">
+    <li ng-repeat="item in data" data-id="{{item.i}}">
+        <span>{{$first?'开始':''}}</span>
+        <strong>{{item.name}}</strong>
+        &nbsp;
+        <span>{{item.age}}</span>
+        <span>{{$last?'结束':''}}</span>
+    </li>
+</ul>
+    <script>
+        //使用自定义的模块才可以依赖别的包里面定义的模块，
+        //angular定义的默认模块没有依赖任何包
+        angular.module('myApp',[]).controller('ListController',['$scope',function($scope){
+            $scope.data = [];
+
+            for(var i=1;i<10;i++){
+                $scope.data[$scope.data.length] = {
+                    id:i,
+                    name:"北方真武大帝" + i,
+                    age:20 + i
+                };
+            }
+        }]);
+
+
+    </script>
+
+</body>
+</html>

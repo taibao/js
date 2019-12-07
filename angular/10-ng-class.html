@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp" class="ng-scope">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+
+<body ng-controller="ListController" class="ng-scope">
+  <!-- ng-show 决定是否显示 ng-hide 是否隐藏 ng-if决定元素是否存在 -->
+  <div class="tips ng-hide" ng-hide="!loading">
+      loadding....
+  </div>
+
+  <script>
+      //使用自定义的模块才可以依赖别的包里面定义的模块，
+      //angular定义的默认模块没有依赖任何包
+      angular.module('myApp',[]).controller('ListController',
+      ['$scope','$timeout',function($scope,$timeout){
+          $scope.loading = true;
+          $timeout(function(){
+            $scope.loading = false;
+            $timeout(function(){
+              $scope.loading = true;
+            },3000);
+          },3000);
+      }]);
+  </script>
+</body>
+</html>

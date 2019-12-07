@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-init="username='<h1>shit</h1>'">
+    <!--  ng-bind指令在绑定的值包含html时会转义
+        需要引入新模块解决此问题
+    -->
+    <strong ng-bind-html="username">{{username}}</strong>
+    <script>
+        //使用自定义的模块才可以依赖别的包里面定义的模块，
+        //angular定义的默认模块没有依赖任何包
+        angular.module('myApp',['ngSanitize']);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* ng-cloak指令在angluar加载完后自动移除 */
+        [ng-cloak]{
+            display: none;
+        }
+    </style>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-app="HelloApp" ng-cloak ng-init="hello.world='ssss'">
+{{true?'星际之主':'false'}}
+
+
+<script>
+    //创建一个模块
+    var app = angular.module("HelloApp",[]);
+    //为模块创建控制器
+    app.controller('worldController',['$scope',function($scope){
+
+
+        //angular 基本基本不用操作dom，如果必要，可是使用angular提供的jqlite
+        //angular.element('body') ; 操作dom
+    }]);
+</script>
+</body>
+</html>

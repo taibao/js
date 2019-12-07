@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-app = "demoApp" ng-controller="DemoController">
+  <itcast-button> </itcast-button>
+  <btnprimary></btnprimary>
+  <btndanger><btndanger>
+<script>
+    /**
+    demoApp
+    */
+    //使用自定义的模块才可以依赖别的包里面定义的模块，
+    //angular定义的默认模块没有依赖任何包
+    var demoApp = angular.module('demoApp',[]);
+    demoApp.controller('DemoController',['$scope',function($scope){
+
+    }]);
+    //第一个参数是指令的名字，第二个参数应该使用一个数组，最后一个元素为一个函数
+    demoApp.directive('itcastButton',[function(){
+      //该函数应该返回一个指令对象
+      return {
+        template:'<input type="button" value="itcast" class="btn btn-lg btn-primary btn-block"/>',
+      };
+    }]);
+
+    //第一个参数是指令的名字，第二个参数应该使用一个数组，最后一个元素为一个函数
+    demoApp.directive('btnprimary',[function(){
+      //该函数应该返回一个指令对象
+      return {
+        template:'<input type="button" value="itcast" style="width:200px;height:100px;background:#2de2f3;" class="btn btn-lg"/>',
+      };
+    }]);
+
+    //第一个参数是指令的名字，第二个参数应该使用一个数组，最后一个元素为一个函数
+    demoApp.directive('btndanger',[function(){
+      //该函数应该返回一个指令对象
+      return {
+        template:'<input type="button" value="itcast" style="width:200px;height:100px;background:#fde2e3;" class="btn btn-lg"/>',
+      };
+    }]);
+
+</script>
+
+</body>
+</html>

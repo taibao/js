@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <style>
+      .red{
+        background-color:red;
+      }
+
+      .green{
+        background-color:green;
+      }
+
+      #box{
+        height:200px;
+        width:200px;
+        transition: background-color 1s ease;
+      }
+    </style>
+</head>
+<body ng-app = "myApp">
+
+<!-- <select ng-model="style">
+  <option value="red">红色</option>
+  <option value="green">绿色</option>
+</select>
+<div id="box" ng-class="{red:style=='red',green:style=='green'}">
+</div>
+-->
+
+<input type="text" ng-model="lastname">
+
+<ul ng-controller="ListController">
+    <li ng-repeat="name in result track by $index" ng-class="{red:name.startsWith(lastname)}">
+        <strong>{{name}}</strong>
+    </li>
+</ul>
+    <script>
+        //使用自定义的模块才可以依赖别的包里面定义的模块，
+        //angular定义的默认模块没有依赖任何包
+        angular.module('myApp',[]).controller('ListController',['$scope',function($scope){
+            $scope.result = ['小新','风间','妮妮','正男','美牙'];
+        }]);
+    </script>
+
+</body>
+</html>
