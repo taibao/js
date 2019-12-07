@@ -1,0 +1,13 @@
+a {
+  font-family: "u5faeu8f6fu96c5u9ed1";
+  font-size: 30px;
+  font-weight: bold; }
+
+div {
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -ms-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s; }
+
+/*# sourceMappingURL=03_mixin.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>docuement</title>
+		<style>
+			#box{
+				width:200px;
+				height:200px;
+				background-color: red;
+				display: none;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+				<input type="text">
+				<input type="submit" value="提交">
+
+		</form>
+
+		<div id="box"></div>
+	</body>
+
+	<script >
+		/*
+			Math对象勾股函数
+		*/
+		// Math.sin() //正弦
+		document.oncontextmenu = function(e){
+			box = document.getElementById("box");
+			var evt = e||event;
+			left = evt.clientX;
+			height = evt.clientY;
+			var str = "x:"+left+"  y:"+height;
+			box.innerHTML = str;
+
+			box.style.display = 'block';
+			box.style.top = height+"px";
+			box.style.left = left+"px";
+
+			document.onmouseup = function(e){
+				box.style.display = 'none';
+			}
+
+			return false;
+		}
+	</script>
+</html>

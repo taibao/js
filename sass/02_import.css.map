@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oBAAgB;EACd,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC",
+"sources": ["_common.scss"],
+"names": [],
+"file": "02_import.css"
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text">
+<ul></ul>
+<script src="../jquery.js"></script>
+<script>
+
+    //实现百度热搜功能
+    function getData(data){
+        var script =  document.querySelector('#jsonp');
+        script.parentNode.removeChild(script);
+        $('ul').html('');
+        for(var i = 0;i<data.g.length;i++){
+            $('<li>'+data.g[i]['q']+'</li>').appendTo('ul');
+        }
+    }
+
+    function getList(wd){
+        var script = document.createElement('script');
+        script.id = 'jsonp';
+        script.src = 'https://www.baidu.com/sugrec?prod=pc&cb=getData&wd='+wd;
+        document.body.appendChild(script);
+    }
+
+    $('input').keyup(function(){
+        var wd = $(this).val();
+        getList(wd);
+    })
+</script>
+</body>
+</html>

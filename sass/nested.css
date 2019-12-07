@@ -1,0 +1,10 @@
+.box {
+  padding-left: 10px;
+  padding-top: 10px; }
+  .box .pic {
+    padding: 10px;
+    border: 1px solid #ccc; }
+  .box img {
+    width: 200px; }
+
+/*# sourceMappingURL=nested.css.map */

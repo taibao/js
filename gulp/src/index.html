@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <h1>这是首页</h1>
+  <p>内容发送变化 ,要想生活过得去</p>
+</body>
+Browser-sync安装与使用
+2018-08-14 15:50:54 IT农工-Don 阅读数 10972  收藏
+版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+本文链接：https://blog.csdn.net/qq_24504591/article/details/81668553
+browser-sync启动命令
+Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。
+
+官网文档：http://www.browsersync.cn/
+
+1. 安装 Node.js
+BrowserSync是基于Node.js的, 是一个Node模块， 如果您想要快速使用它，也许您需要先安装一下Node.js
+
+官网下载：http://nodejs.cn/download/
+教程:https://jingyan.baidu.com/article/48b37f8dd141b41a646488bc.html
+
+2. 安装 BrowserSync
+npm install -g browser-sync
+1
+3. 启动 BrowserSync
+browser-sync start --server --files "*"
+1
+更多命令行用法查看官网:http://www.browsersync.cn/docs/command-line/
+
+文章最后发布于: 2018-08-14 15:50:54
+browsersync的安装与基本使用
+阅读数 2152
+
+[ps]这个工具支持不同的开发环境, 支持不同的开发语种, 不限于前端, 也不限于后端, 实现原理是监听内容文件夹, 实现改动, 自动刷新, 例如 php, html, css 等等..Browser...
+博文
+来自：	wangle_style的博客
+
+想对作者说点什么
+浏览器同步测试工具Browsersync安装与启动步骤
+阅读数 368
+
+一、安装Node.js：1、打开chrome浏览器 ，在地址输入栏里输入Node.js，选中第一个：2、在Node.js官网里，它会自动检测你电脑的操作系统类型，我们选择LTS版本进行下载：3、下载好...
+博文
+来自：	weixin_41178230的博客
+web 网页调试工具 browser-sync 在 Windows 上安装
+阅读数 1925
+
+web 网页调试工具 browser-sync 在 Windows 上安装当在开发的机器上，修改了html页面，css 文件时，希望能立即看到改正后的结果。使用 browser-sync 这个工具能达...
+博文
+来自：	https://github.com/pepstack
+browser-sync安装使用以及填坑
+阅读数 1458
+
+安装BrowserSyncBrowserSync是一个npm包，所以在安装前他需要先装上Node.js1、npminstall-gbrower-sync     -g表示全局安装2、browser-s...
+博文
+来自：	阿飞好累的博客
+
+用browser-sync进行实时刷新
+阅读数 4142
+
+1.添加gulp、gulp-sass、browser-sync组件npm install --save-dev gulp gulp-sass browser-sync会在package.json中添加...
+博文
+来自：	attwice的专栏
+browser-sync找不到应用程序，
+01-10
+-问答
+省时的浏览器同步测试工具 browersync
+阅读数 776
+
+这两天在看姜老大的响应式一站开发，从中看到了很多的之前没有看到过的东西，学到了很多！这里就着重的写一下browersync的使用http://www.browsersync.cn/#install 中...
+博文
+来自：	bluefish_flying的博客
+browser-sync的使用
+阅读数 389
+
+1.创建一个 package.josn 文件：npm init -y2.安装 browser-sync:npm install –save-dev browser-sync3. 将 browser-s...
+博文
+来自：	github_38469586的博客
+前端实时可视化开发工具
+阅读数 1万+
+
+三种工具的使用：liveStyle官网：http://livestyle.io/EmmetLiveStyle有如下几个特点：1.即时更新(不会重新加载页面，样式修改以后无需保存也能预览);;2.多个页...
+博文
+来自：	泠泠似水
+
+Win10下 Gulp,Browser-sync 入门
+阅读数 1209
+
+一定要按顺序做在网上看了很多博客，90%都是一样的，而且并没有实际的例子，所以做起来有很多困难。所以我建议，大家就不要转载那种没有加入新元素的文章了！对自己没用，且对新学者简直就是一种伤害，半天搜不到...
+博文
+来自：	Dafang_Xu的博客
+Browsersync使用教程
+阅读数 104
+
+1分钟快速使用 Browsersync	下载安装 nodejs	命令行窗口 ( 全局安装 browsersync )：npm install -g browser-sync	在 项目文件夹 内...
+博文
+来自：	F12138_的博客
+ wangle_style关注
+wangle_style
+68篇文章
+
+排名:千里之外
+
+Mingo7关注
+Mingo7
+23篇文章
+
+排名:千里之外
+
+车斗关注
+车斗
+361篇文章
+
+排名:721
+
+阿飞好累关注
+阿飞好累
+3篇文章
+
+排名:千里之外
+
+Browser-Sync 实时可视化工具
+阅读数 446
+
+参考链接：https://blog.csdn.net/uikoo9/article/details/72368089?utm_source=itdadao&amp;amp;utm_medium=ref...
+博文
+来自：	笙
+browsersync的使用方法
+阅读数 2042
+
+使用browsersync两年时间了，最近一段时间放弃了，不是browsersync的问题，是自己的问题，简单的说是，以前项目都是静态文件，直接用browsersync自带服务器跑起来就好，后来用no...
+博文
+来自：	前端小99的博客
+使用browser-sync进行页面的实时监听
+阅读数 459
+
+咱们在写页面的时候如果不用框架或者webpack之类的自动化工具，每次修改一个样式或者一个js，就得自己手动刷新一下页面，这对于追求高效率的我们来说是很浪费时间的，那么今天给大家来介绍一个工具—— ...
+博文
+来自：	qq_42345237的博客
+
+browser-sync使用
+阅读数 180
+
+1.安装官方文档安装2.在未安装gulp且有本地服务器的情况下使用，cmd进入项目目录下,输入dos命令，browser-sync start --proxy &quot;localhost:8020...
+博文
+来自：	Fancy_Q的博客
+BrowserSync的安装和使用
+阅读数 77
+
+BrowserSync真是前端必备神器，浏览器同步工具。简单来说就是当你保存文件的同时浏览器自动刷新网页，省去了手动的环节，大大的节省了开发时间，这个工具是基于nodejs的，可以通过npm安装，不在...
+博文
+来自：	北杨
+gulp browser-sync 构建前端开发工具
+阅读数 1156
+
+browser-syncBrowsersync 能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。config.js 配置文件var src = 's...
+博文
+来自：	issac的博客
+npm browser-sync(观察者)安装及初步使用
+阅读数 183
+
+npm最基本安装gulp验证打包压缩加密编译(常用)也是在gulpfile.js里操作//头部引用: require里输入的是你指令安装插件的名字,可在node_modules里看到var gulp=...
+博文
+来自：	chijiajing的博客
+browser-sync的安装使用
+阅读数 465
+
+作用：更改代码之后自动刷新浏览器安装：browser-sync是基于npm的，首先要安装npm，再通过npm在命令行里进行安装，安装代码如下：需要使用npm进行全局安装:` npm install b...
+博文
+来自：	gary的博客
+
+win7安装 browser-sync 安装使用笔记
+阅读数 1910
+
+browser-sync  最大的好处是可以在不同浏览器、不同设备上调试同一个页面，下面说一下安装步骤1、安装node.js  2、设置npm_module目录的地址，这个系统有默认地址，可以不设置，...
+博文
+来自：	zee移动互联网应用开发
+gulp browser-sync 完整配置 浏览器自动刷新
+阅读数 6413
+
+gulp 完整配置模板 适用于一般项目，（可以使用 jquery swiper 等插件，如需使用 react angular 等 需要添加配置）1. 项目目录结构 |-- app ...
+博文
+来自：	mjzhang1993的博客
+browser-sync自动刷新-前端利器
+阅读数 4467
+
+browser-sync自动刷新链接:这是一个神器，相比LiveRoad使用比较简单，建议做前端开发的同学，不要犹豫和观察，赶紧装上释放你的F5吧。以下来自己browser-sync中文网的介绍和使用...
+博文
+来自：	jrn1012的专栏
+gulp+browser-sync使用方法
+阅读数 692
+
+gulp简介gulp是基于流的自动化构建工具，也就是说gulp是通过操作流实现自动编译，压缩文件等操作的。这得益于node.js对流的支持，当然gulp.js和构建的任务文件都是JavaScript编...
+博文
+来自：	c6sikue0的专栏
+browser-sync搭建实时刷新页面效果
+阅读数 886
+
+使用工具：node+gulp+browser-sync首先安装node然后命令行安装gulp和browser-sync插件   npm install gulp -gnpm install brows...
+博文
+
+webpack与browser-sync热更新原理深度讲解
+阅读数 3996
+
+本文包含如下内容：webpack-hot-middlewareEventSourceCORSnginx配置browser-syncWebSocket支持性Frame建立连接服务端实现发送和监听消息关闭...
+博文
+来自：	garyhu1的博客
+使用browserSync不起作用的解决办法
+阅读数 3311
+
+记录一下使用browserSync所踩的坑。。全局安装browserSyncnpm install -g browser-sync局部安装browserSyncnpm install browser-...
+博文
+来自：	Leo的专栏
+Browsersync(浏览器同步测试工具)配置教程
+阅读数 5509
+
+最近在开发前端,要不断查看html或js的更改效果,于是找到了这一款工具,可以自动刷新,免除了不断F5的痛苦^_^.配置教程:1. 安装Node.jsBrowserSync是基于Node.js的,是N...
+博文
+来自：	一路风景
+接私活必备的 10 个开源项目！
+阅读数 6万+
+
+点击蓝色“GitHubDaily”关注我加个“星标”，每天下午18:35，带你逛GitHub！作者|SevDot来源|http://1t.click/VE8W......
+博文
+来自：	GitHubDaily
+browser-sync 安装
+阅读数 3
+
+自动加载'刷新'浏览器，由于重新加载所以不受缓存影响win + p -&gt; 扩展npm安装：npm install browser-sync -g检查是否安装成功：browser-sync --v...
+博文
+来自：	weixin_30576859的博客
+
+前端神器-Browsersync
+阅读数 7779
+
+【前言】从去年5月份入职新公司到现在，一直很忙，抽不出空来写博客了，有人会说时间挤挤总是有的，但是我可以告诉你，每天早上9点，晚上12点，周末休一天，简直是残酷的，学习时间严重挤压，最近好点了，哈哈~...
+博文
+来自：	uikoo9的专栏
+前端开发：实时刷新（及时预览）工具小汇总，兼有gulp+browser-sync设置方法
+阅读数 767
+
+自己写标签： 实时刷新、 免F5、 gulp + browser-sync开门见山，首先讲明一下本文的定位吧：写这篇文章是因为自己在平时的学习中，一次次试验了很多的前端实时刷新工具，有顺手的，有蹩脚的...
+博文
+来自：	hahahhahahahha123456的博客
+基于nodejs的前端调试工具browser-sync入门
+阅读数 4202
+
+1 - 关于browser-syncbrowser-sync是一个基于nodejs的一个插件，用于前端调试，好处是该插件可以同步一个网段内的所有页面，比方说，假如你要做一个响应式的网页的时候，该插件就...
+博文
+来自：	chen1057376155的博客
+别再翻了，面试二叉树看这 11 个就够了~
+阅读数 7万+
+
+写在前边数据结构与算法：不知道你有没有这种困惑，虽然刷了很多算法题，当我去面试的时候，面试官让你手写一个算法，可能你对此算法很熟悉，知道实现思路，但是总是不知道该在什么地方写，而且很多边界条件想不全面...
+博文
+来自：	一个不甘平凡的码农
+在Vue项目中使用浏览器同步测试工具 browersync
+阅读数 651
+
+第一个是全局，建议使用第二种方式。然后在你的package.json中，你会看到新的依赖，然后配置你的&quot;scripts&quot;: {    &quot;dev&quot;: &quot;...
+博文
+来自：	Kurapika47的博客
+
+程序员实用工具网站
+阅读数 21万+
+
+目录1、搜索引擎2、PPT3、图片操作4、文件共享5、应届生招聘6、程序员面试题库7、办公、开发软件8、高清图片、视频素材网站9、项目开源10、算法11、在线工具宝典大全程序员开发需要具备良好的信息检...
+博文
+来自：	不脱发的程序猿
+史上最详细的IDEA优雅整合Maven+SSM框架（详细思路+附带源码）
+阅读数 6万+
+
+网上很多整合SSM博客文章并不能让初探ssm的同学思路完全的清晰，可以试着关掉整合教程，摇两下头骨，哈一大口气，就在万事具备的时候，开整，这个时候你可能思路全无 ~中招了咩~ ，还有一些同学依旧在使用...
+博文
+来自：	程序员宜春的博客
+我的 Input框 不可能这么可爱
+阅读数 3万+
+
+作者：陈大鱼头github： KRISACHAN&lt;input /&gt; 标签是我们日常开发中非常常见的替换元素了，但是最近在刷 whattwg 跟 MDN 的时候发现 跟 &lt;input ...
+博文
+来自：	鱼头的Web海洋
+爬虫小程序 - 爬取王者荣耀全皮肤
+阅读数 5412
+
+你也想要王者荣耀全皮肤吗？
+博文
+来自：	君莫笑
+LeetCode解题汇总目录
+阅读数 7618
+
+此篇为LeetCode刷题的汇总目录，方便大家查找，一起刷题，一起PK交流！ 已解题目 考点 LeetCode 1. 两数之和（哈希） LeetCode 2. 两数相加（单链表反...
+博文
+
+动态规划入门到熟悉，看不懂来打我啊
+阅读数 6962
+
+2.1斐波那契系列问题 2.2矩阵系列问题 2.3跳跃系列问题 3.1 01背包 3.2 完全背包 3.3多重背包 3.4 一些变形选讲 2.1斐波那契系列问题 在数学上，...
+博文
+挑战10个最难的Java面试题（附答案）【上】
+阅读数 5万+
+
+这是收集的10个最棘手的Java面试问题列表。这些问题主要来自 Java 核心部分 ,不涉及 Java EE 相关问题。你可能知道这些棘手的 Java 问题的答案，或者觉得这些不足以挑战你的 Java...
+博文
+如何优雅的爬妹子网
+阅读数 1万+
+
+from urllib import request import os from user_agents import ua_list import time import random impor...
+博文
+GitHub开源的10个超棒后台管理面板
+阅读数 5万+
+
+目录 1、AdminLTE 2、vue-Element-Admin 3、tabler 4、Gentelella 5、ng2-admin 6、ant-design-pro 7、blur-a...
+博文
+花了20分钟，给女朋友们写了一个web版群聊程序
+阅读数 6143
+
+参考博客 [1]https://www.byteslounge.com/tutorials/java-ee-html5-websocket-example
+博文
+
+免费好用的外网映射工具
+阅读数 419
+
+写在前面的话 ngrok就不多说了，作为一款免费又好用的映射工具，绝对是你调试程序的有力助手，话不多说，下面我来分享一下自己的心得 --------------------------------...
+博文
+对计算机专业来说学历真的重要吗？
+阅读数 11万+
+
+我本科学校是渣渣二本，研究生学校是985，现在毕业五年，校招笔试、面试，社招面试参加了两年了，就我个人的经历来说下这个问题。 这篇文章很长，但绝对是精华，相信我，读完以后，你会知道学历不好的解决方案...
+博文
+【C++ / Java】蓝桥杯 —— 基础训练
+阅读数 473
+
+文章目录A - 蓝桥杯1061 基础练习 完美的代价B. Shooting（贪心，签到）C. White Sheet（思维）D. Swords（思维） A - 蓝桥杯1061 基础练习 完美的代价 ...
+博文
+面试官，不要再问我三次握手和四次挥手
+阅读数 14万+
+
+三次握手和四次挥手是各个公司常见的考点，也具有一定的水平区分度，也被一些面试官作为热身题。很多小伙伴说这个问题刚开始回答的挺好，但是后面越回答越冒冷汗，最后就歇菜了。 见过比较典型的面试场景是这样的:...
+博文
+一生必看的纪录片
+阅读数 2021
+
+下面按对自己的影响/感悟程度来排序 《人生七年》 概要：人生七年》又称作《56up》也是非常多的网友在看过之后，都让自己陷入了一些思考，对人生思考有一定影响力的纪录片之一导演从1964年开始第一...
+博文
+
+MySQL数据库—SQL汇总
+阅读数 3万+
+
+一、准备 下文整理常见SQL语句的用法，使用MySQL5.7测试，参考了尚硅谷MySQL教程及用例。用例sql： 链接: https://pan.baidu.com/s/1tb3-12MRNFjV8d...
+博文
+java学习路线导航【教学视频+博客+书籍整理】
+阅读数 2万+
+
+在博主认为，学习java的最佳学习方法莫过于视频+博客+书籍+总结，前三者博主将淋漓尽致地挥毫于这篇博客文章中，至于总结在于个人，博主将为各位保驾护航，各位赶紧冲鸭！！！上天是公平的，只要不辜负时间，...
+博文
+史上最全的mysql基础教程
+阅读数 2万+
+
+启动与停止 启动mysql服务 sudo /usr/local/mysql/support-files/mysql.server start 停止mysql服务 sudo /usr/loc...
+博文
+为什么你学不会递归？告别递归，谈谈我的经验
+阅读数 4万+
+
+可能很多人在大一的时候，就已经接触了递归了，不过，我敢保证很多人初学者刚开始接触递归的时候，是一脸懵逼的，我当初也是，给我的感觉就是，递归太神奇了！ 可能也有一大部分人知道递归，也能看的懂递归，但在实...
+博文
+有哪些让程序员受益终生的建议
+阅读数 6万+
+
+从业五年多，辗转两个大厂，出过书，创过业，从技术小白成长为基层管理，联合几个业内大牛回答下这个问题，希望能帮到大家，记得帮我点赞哦。 敲黑板！！！读了这篇文章，你将知道如何才能进大厂，如何实现财务自...
+博文
+大学四年自学走来，这些私藏的实用工具/学习网站我贡献出来了
+阅读数 15万+
+
+大学四年，看课本是不可能一直看课本的了，对于学习，特别是自学，善于搜索网上的一些资源来辅助，还是非常有必要的，下面我就把这几年私藏的各种资源，网站贡献出来给你们。主要有：电子书搜索、实用工具、在线视频...
+博文
+linux系列之常用运维命令整理笔录
+阅读数 4835
+
+本博客记录工作中需要的linux运维命令，大学时候开始接触linux，会一些基本操作，可是都没有整理起来，加上是做开发，不做运维，有些命令忘记了，所以现在整理成博客，当然vi，文件操作等就不介绍了，慢...
+博文
+大学四年，我把私藏的自学「学习网站/实用工具」都贡献出来了
+阅读数 7万+
+
+在分享之前，先说说初学者如何学习编程，这个话题想必非常的重要，要学好编程，给你一些学习网站也好、实用工具也好，但前提是你知道如何去学习它。 见过很多初学者，以及小鹿我刚开始学习的时候，也是自己瞎摸索，...
+博文
+中国麻将：世界上最早的区块链项目
+阅读数 4万+
+
+中国麻将：世界上最早的区块链项目 最近区块链这个玩意又被市场搞的很是火热，相信大部分人都不太清楚这玩意到底是怎么样的一个概念，它来了，它来了，它到底是啥~ 国家都开始发文支持了，下面是一个通俗易懂的...
+博文
+比特币原理详解
+阅读数 3万+
+
+一、什么是比特币 比特币是一种电子货币，是一种基于密码学的货币，在2008年11月1日由中本聪发表比特币白皮书，文中提出了一种去中心化的电子记账系统，我们平时的电子现金是银行来记账，因为银行的背后是...
+博文
+【AI产品】你我当年的老照片，如今修复了可还行？
+阅读数 347
+
+欢迎来到《AI产品》专栏，这一个专栏是面向所有对人工智能技术感兴趣的朋友。在这个专栏里，我们会给大家推荐好玩的AI产品，剖析背后的关键技术，并推荐相关学习资料。今天要推荐......
+博文
+兼职程序员一般可以从什么平台接私活？
+阅读数 6万+
+
+这个问题我进行了系统性的总结，以下将进行言简意赅的说明和渠道提供，希望对各位小猿/小媛们有帮助~ 根据我们的经验，程序员兼职主要分为三种：兼职职位众包、项目整包和自由职业者驻场。 所谓的兼职职位众...
+博文
+死磕C语言指针
+阅读数 6522
+
+兜兜转转还是逃不过 C 语言，这该死的缘分。 先看一眼我的西野七濑 学习自：https://zhuanlan.zhihu.com/p/89121683 1 指针 1.1 指针是乜嘢 指针...
+博文
+Python十大装B语法
+阅读数 6万+
+
+Python 是一种代表简单思想的语言，其语法相对简单，很容易上手。不过，如果就此小视 Python 语法的精妙和深邃，那就大错特错了。本文精心筛选了最能展现 Python 语法之精妙的十个知识点，并...
+博文
+数据库优化 - SQL优化
+阅读数 5471
+
+前面一篇文章从实例的角度进行数据库优化，通过配置一些参数让数据库性能达到最优。但是一些“不好”的SQL也会导致数据库查询变慢，影响业务流程。本文从SQL角度进行数据库优化，提升SQL运行效率。 ...
+博文
+2019年11月中国编程语言排行榜
+阅读数 6821
+
+2019年11月2日，我统计了某招聘网站，获得有效程序员招聘数据9万条。针对招聘信息，提取编程语言关键字，并统计如下： 编程语言比例 rank pl_ percentage 1 jav...
+博文
+通俗易懂地给女朋友讲：线程池的内部原理
+阅读数 3384
+
+餐盘在灯光的照耀下格外晶莹洁白，女朋友拿起红酒杯轻轻地抿了一小口，对我说：“经常听你说线程池，到底线程池到底是个什么原理？”...
+博文
+python学习目录
+阅读数 1万+
+
+这是我学习python的一套流程，从入门到上手 一、Python入门、环境搭建、变量、数据类型 二、Python运算符、条件结构、循环结构 三、Python函数 四、做一次综合练习,做一个控制台...
+博文
+刷了几千道算法题，这些我私藏的刷题网站都在这里了！
+阅读数 3万+
+
+遥想当年，机缘巧合入了 ACM 的坑，周边巨擘林立，从此过上了"天天被虐似死狗"的生活… 然而我是谁，我可是死狗中的战斗鸡，智力不够那刷题来凑，开始了夜以继日哼哧哼哧刷题的日子，从此"读题与提交...
+博文
+想要成为一名优秀的Java程序员，这份文档必读
+阅读数 5302
+
+Java语言JTEST规范：参考自SUN公司文档 A. 规则（1—2 级） 在switch 中每个 case 语句都应该包含 break 或者 return 。 不要使用空的for 、if 、...
+博文
+少年，你知道怎么用一行代码解决分布式事务问题吗？
+阅读数 413
+
+一、前言 分布式事务想必大家都比较熟悉了，也知道分布式事务的一些解决方案，什么两阶段，三阶段，基于消息的最终一致性等方法，相信大家都是耳熟能详了。这个问题也是面试中被问的最多的。略作准备的话，基本是...
+博文
+项目中的if else太多了，该怎么重构？
+阅读数 1万+
+
+介绍 最近跟着公司的大佬开发了一款IM系统，类似QQ和微信哈，就是聊天软件。我们有一部分业务逻辑是这样的 if (msgType = "文本") { // dosomething } else if...
+博文
+致 Python 初学者
+阅读数 4万+
+
+欢迎来到“Python进阶”专栏！来到这里的每一位同学，应该大致上学习了很多 Python 的基础知识，正在努力成长的过程中。在此期间，一定遇到了很多的困惑，对未来的学习方向感到迷茫。我非常理解你们所...
+博文
+YouTube排名第一的励志英文演讲《Dream(梦想)》
+阅读数 1万+
+
+Idon’t know what that dream is that you have, I don't care how disappointing it might have been as y...
+博文
+“狗屁不通文章生成器”登顶GitHub热榜，分分钟写出万字形式主义大作
+阅读数 3万+
+
+一、垃圾文字生成器介绍 最近在浏览GitHub的时候，发现了这样一个骨骼清奇的雷人项目，而且热度还特别高。 项目中文名：狗屁不通文章生成器 项目英文名：BullshitGenerator 根据作...
+博文
+程序员：我终于知道post和get的区别
+阅读数 3万+
+
+是一个老生常谈的话题，然而随着不断的学习，对于以前的认识有很多误区，所以还是需要不断地总结的，学而时习之，不亦说乎...
+博文
+走进Golang之编译器原理
+阅读数 277
+
+为了学好Golang底层知识装逼，折腾了一下编译器相关知识。下面的内容并不会提升你的生产技能点，但可以提高你的装逼指数。请按需进入！ 本文目录速览： 认识 go build 编译器原理 词法分析...
+博文
+Python 植物大战僵尸代码实现(2):植物卡片选择和种植
+阅读数 5071
+
+这篇文章要介绍的是： - 上方植物卡片栏的实现。 - 点击植物卡片，鼠标切换为植物图片。 - 鼠标移动时，判断当前在哪个方格中，并显示半透明的植物作为提示。...
+博文
+Java世界最常用的工具类库
+阅读数 1万+
+
+Apache Commons Apache Commons有很多子项目 Google Guava 参考博客
+博文
+python json java mysql pycharm android linux json格式 c# 开源库 c#两个程序间通信 c# 区块链特点 c# xml 如何写 c# 线程池 锁 c#在表单里按钮控件居中 4g网卡 c# c#设置代理服务器 c# 外部程序 触发器 c#读取串口数据demo
+没有更多推荐了，返回首页
+
+©️2019 CSDN 皮肤主题: 大白 设计师: CSDN官方博客
+
+IT农工-Don
+TA的个人主页 >
+私信
+关注
+原创
+52
+粉丝
+11
+获赞
+26
+评论
+21
+访问
+53万+
+等级:
+周排名:
+1万+
+积分:
+5467
+总排名:
+1万+
+勋章:
+
+最新文章
+关于JSON.stringify()的用法
+Node.js fs模块(文件模块)，创建、删除目录(文件)，读取写入文件流
+仅3行核心css代码的rate评分组件
+标签内title属性鼠标悬停提示内容换行
+快应用的注意事项
+归档
+2019年11月 4篇
+2019年9月 3篇
+2019年8月 1篇
+2019年7月 2篇
+2019年6月 2篇
+2019年5月 1篇
+2019年4月 3篇
+2019年3月 25篇
+2019年2月 7篇
+2018年11月 3篇
+2018年10月 1篇
+2018年8月 9篇
+2018年1月 2篇
+2017年11月 1篇
+展开
+
+热门文章
+React中路由传参及接收参数的方式(最新react-router-dom^4.2.2的写法)
+阅读数 28050
+
+python3 turtle模块画正方形、矩形、正方体、五角星、奥运五环
+阅读数 14196
+
+vsCode 开发微信小程序插件
+阅读数 13227
+
+Element表单验证规则
+阅读数 13059
+
+pycharm不识别turtle下的解决方法
+阅读数 13025
+
+最新评论
+使用 Prism.js 实现漂亮的...
+qq_35628795：[reply]BrotherBear2008[/reply] 将html代码中的<和>改成转义字符&lt;和&gt;
+
+pycharm不识别turtle下...
+weixin_45381375：还是不行啊
+
+pycharm格式化python代...
+xWolfJack：正解！非常感谢
+
+pycharm格式化python代...
+qq_18617009：真的好用
+
+pycharm格式化python代...
+weixin_44424683：qq 也有冲突键
+
+
+CSDN学院
+CSDN学院
+
+CSDN企业招聘
+CSDN企业招聘
+
+kefu@csdn.net QQ客服
+
+客服论坛400-660-0108
+
+工作时间 8:30-22:00
+
+关于我们招聘广告服务 网站地图
+
+京ICP备19004658号 经营性网站备案信息
+
+公安备案号 11010502030143
+
+©1999-2019 北京创新乐知网络技术有限公司
+
+网络110报警服务
+
+北京互联网违法和不良信息举报中心
+
+中国互联网举报中心家长监护版权申诉
+
+
+版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+本文链接：https://blog.csdn.net/zyj0209/article/details/82982805
+参考链接：
+
+https://blog.csdn.net/uikoo9/article/details/72368089?utm_source=itdadao&utm_medium=referral
+
+https://www.imooc.com/article/14759
+
+Browser-Sync功能简单的说就是：当修改了html，css，js等文件时，保存后浏览器自动刷新页面
+
+【安装】
+browser-sync 依赖于node环境，所以在安装前需要确定已经安装好了nodejs
+
+进入终端，全局安装browsersync
+
+npm install -g browser-sync
+ 
+
+【静态项目使用browsersync】
+ 安装成功以后，cd到自己的项目文件夹下，执行以下命令,监听css html js文件的变化
+
+browser-sync start --server --files "**/*.css, **/*.html, **/*.js"
+注意一个问题:在初次尝试的时候，发现监听到了3000端口，但是修改文件发现浏览器并没有更新，后来换了一个没有中文名称的demo项目，就可以正常运行了。 
+
+【动态项目使用browsersync】
+动态项目的意思，就是用java，php，nodejs跑起来的项目，同时又想监听html，css，js的变化，
+
+拿nodejs来说，跑起一个端口9007的项目：
+
+然后用browsersync的proxy做代理，监听这个项目：
+
+代码：
+
+1
+
+browser-sync start --proxy "localhost:9007" --files "static/**/*.css, static/**/*.js, views/**/*.html"
+
+和静态项目的不同点是：
+
+静态项目：用browsersync自带的server跑起来
+
+动态项目：用java，php，nodejs跑起来，然后通过代理监听项目静态资源
+
+【动态项目使用browsersync】
+结合gulp实现实时刷新，参考：https://www.imooc.com/article/14759
+
+大致步骤：
+
+1.npm install -g gulp
+
+ 2.进入项目目录执行：npm init
+3.作为项目的开发依赖安装gulp和Browsersync：
+  npm install --save-dev gulp
+
+  npm install --save-dev browser-sync
+
+4.在项目根目录下新建gulpfile.js,然后在gulpfile.js中定义一个任务，启动Browsersync：
+
+var gulp = require('gulp'); // 调用 .create() 意味着你得到一个唯一的实例并允许您创建多个服务器或代理。
+var browserSync = require('browser-sync').create(); // 定义一个任务，任务的名字，该任务所要执行的一些操作
+gulp.task('watch', function() { // 启动Browsersync服务。这将启动一个服务器，代理服务器（proxy）或静态服务器（server）
+    browserSync.init({ // 设置监听的文件，以gulpfile.js所在的根目录为起点，如果不在根目录要加上路径，单个文件就用字符串，多个文件就用数组
+        files: ["*.html", "css/*.css", "js/*.js"], // 启动静态服务器，默认监听3000端口，设置启动时打开的index.html的路径
+        server: { baseDir: "./" }, // 在不同浏览器上镜像点击、滚动和表单，即所有浏览器都会同步
+        ghostMode: { clicks: true, scroll: true }, // 更改控制台日志前缀
+        logPrefix: "learning browser-sync in gulp", // 设置监听时打开的浏览器，下面的设置会同时打开    chrome, firefox和IE
+        browser: ["chrome", "firefox", "iexplore"], // 设置服务器监听的端口号
+        port: 8080
+    });
+});
+5.最后在命令行中执行gulp watch，执行watch任务，就可以启动Browsersync了。这次因为设置了要打开的浏览器为chrome、firefox还有IE，会同时打开三个浏览器
+————————————————
+版权声明：本文为CSDN博主「z沧笙踏歌」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zyj0209/article/details/82982805
+
+<script src="./js/output.js"></script>
+</html>

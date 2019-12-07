@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>策略模式，实现解耦</title>
+
+    <script src="starategy.js"></script>
+</head>
+<body>
+通过注入不同的对象到接口处，一次实现不同的功能
+</body>
+<script>
+    function Go2Victory(stra){
+        this.strategy = stra;
+    }
+
+    Go2Victory.prototype.victory = function(){
+        this.strategy.tactics();
+    }
+    var v = new Go2Victory(new Strategy());
+    v.victory();
+</script>
+</html>

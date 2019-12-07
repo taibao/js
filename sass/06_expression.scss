@@ -1,0 +1,23 @@
+@for $i from 1 through 72{
+  .box div:nth-of-type(#{$i}){
+    -webkit-transform:rotateY($i*30deg) ;
+    -moz-transform: rotateY($i*30deg);
+    -ms-transform:rotateY($i*30deg) ;
+    -o-transform:rotateY($i*30deg) ;
+    transform:rotateY($i*30deg) ;
+  }
+}
+
+$someEvent:true;
+
+@if $someEvent{
+  p{
+    color:#ccc;
+    background:black;
+  }
+}@else{
+  p{
+    background: red;
+    color:black;
+  }
+}

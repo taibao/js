@@ -1,0 +1,49 @@
+ul{
+    list-style:none;
+}
+.slider{
+    position: relative;
+    width:700px;
+    height:400px;
+    overflow: hidden;
+}
+
+.slider .list{
+    position: absolute;
+}
+
+.slider .list .item{
+    width: 700px;
+    height:400px;
+    float: left;
+}
+
+.slider .list .item img{
+    width: 700px;
+    height:400px;
+    display: block;
+}
+
+.slider .prev, .slider .next{
+    position: absolute;
+    top:150px;
+}
+
+.slider .next{
+    right: 0px;
+}
+.slider .pagination .bullet{
+    width: 20px;
+    height:20px;
+    background-color:black;
+    margin-left: 5px;
+    top:200px;
+    position:relative;
+    z-index:999;
+    float: left;
+    cursor: pointer;
+}
+
+.focus{
+    background-color: #BADA55 !important;
+}

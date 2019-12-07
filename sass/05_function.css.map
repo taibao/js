@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,GAAG;EACD,KAAK,EAAC,SAAa;EACnB,MAAM,EAAC,SAAa",
+"sources": ["05_function.scss"],
+"names": [],
+"file": "05_function.css"
+}

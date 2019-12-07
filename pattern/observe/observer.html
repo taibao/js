@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="hero.js"></script>
+    <script src="observer.js"></script>
+</head>
+<body>
+<button>first Blood</button>
+<button>double kill</button>
+<script>
+    var msg = new Message();//隔离了英雄之间的关系
+    var hz = new Hero('黄忠',msg);
+    var lb = new Hero('吕布',msg);
+    var zy = new Hero('周瑜',msg);
+    var gy = new Hero('关羽',msg);
+
+    msg.attach(hz);
+    msg.attach(lb);
+    msg.attach(zy);
+    msg.attach(gy);
+
+    document.querySelector('button:first-of-type').onclick = function(){
+        msg.setState('first blood');
+    }
+    document.querySelector('button:last-of-type').onclick = function(){
+        msg.setState('double kill');
+    }
+</script>
+</body>
+</html>

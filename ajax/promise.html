@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<!--使用promise-then解决ajax回调地狱问题-->`
+
+<p></p>
+<script>
+function getPara1(){
+    return new Promise(function(resolve,reject){
+        $.get('./1.txt',function(p1){
+            resolve(p1);
+        })
+    })
+}
+
+function getPara2(){
+    return new Promise(function(resolve,reject){
+        $.get('./2.txt',function(p2){
+            resolve(p2);
+        })
+    })
+}
+
+function getPara3(){
+    return new Promise(function(resolve,reject){
+        $.get('./3.txt',function(p3){
+            resolve(p3);
+        })
+    })
+}
+function getPara4(){
+    return new Promise(function(resolve,reject){
+        $.get('./4.txt',function(p4){
+            resolve(p4);
+        })
+    })
+}
+
+var article = '';
+getPara1().then(function(p1){
+    article += p1 + '<br>';
+    return getPara2();
+}).then(function(p2){
+    article += p2 + '<br>';
+    return getPara3();
+}).then(function(p3){
+    article += p3 + '<br>';
+    return getPara4();
+}).then(function(p4){
+    article += p4 + '<br>';
+    $("p").html(article);
+})
+
+</script>
+</body>
+</html>

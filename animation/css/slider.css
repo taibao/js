@@ -1,0 +1,42 @@
+.slider{
+    position: absolute;
+    width:800px;
+    height:500px;
+    border:5px solid crimson;
+}
+
+.slider .list{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .list .item{
+    position:absolute;
+    left:0px;
+    top:0px;
+    opacity:0;
+}
+
+.slider .list .item:first-of-type{
+    opacity: 1;
+}
+
+.slider .list .item img{
+    width:800px;
+    height: 500px;
+    display: block;
+}
+
+.slider .next,.slider .prev{
+    position: absolute;
+    top:300px;
+}
+.slider .next{
+    right: 5px;
+}
+
+.slider .prev{
+    left: 5px;
+}
