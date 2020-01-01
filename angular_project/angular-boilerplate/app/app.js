@@ -8,5 +8,5 @@ angular.module('moviecat', [
   'moviecat.top250'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/in_theaters'});
 }]);

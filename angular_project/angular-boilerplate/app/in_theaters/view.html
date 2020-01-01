@@ -1,5 +1,16 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<h1 class="page-header">正在热映</h1>
+<div class="list-group">
+  <a ng-repeat="item in subjects" href="#" class="list-group-item">
+    <div class="media">
+      <div class="media-left">
+          <img class="media-object" style="width:100px;" src="{{item.images.small}}" alt="{{item.title}}">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{item.title}}</h4>
+        <p>导演：<strong>{{item.directors[0].name}}</strong></p>
+        <p>类型：<strong>{{item.genres.toString()}}</strong></p>
+        <p>主演：<strong ng-repeat="actor in item.casts">{{actor.name}} </strong></p>
+      </div>
+    </div>
+  </a>
+</div>
