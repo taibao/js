@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="myApp">
+<html lang="zh-CN" ng-app="moviecat">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My AngularJS App</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="icon.css">
   <link rel="stylesheet" href="dashboard.css">
 </head>
 
@@ -39,28 +42,27 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-              <li class="active"><a href="#">正在热映</a></li>
-              <li><a href="#">即将上映</a></li>
-              <li><a href="#">Top250</a></li>
+            <ul class="nav nav-sidebar" ng-controller="NavController">
+              <li ng-class="{active:type=='in_theaters'}"><a href="#/in_theaters/1">正在热映{{type}}</a></li>
+              <li ng-class="{active:type=='coming_soon'}"><a href="#/coming_soon/1">即将上映</a></li>
+              <li ng-class="{active:type=='top250'}"><a href="#/top250/1">Top250</a></li>
             </ul>
           </div>
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">正在上映的电影</h1>
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view>
 
           </div>
-
-
         </div>
       </div>
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- 主模块 -->
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  <script src="components/http.js"></script>
+  <!-- 子模块 -->
+  <!-- <script src="in_theaters/controller.js"></script>
+  <script src="coming_soon/controller.js"></script>
+  <script src="top250/controller.js"></script> -->
+  <script src="movie_list/controller.js"></script>
+
+
 </body>
 </html>

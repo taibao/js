@@ -1,5 +1,36 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<h1 class="page-header">{{title}}</h1>
+<div class="list-group">
+  <!--显示3条从第0条开始-->
+  <a ng-repeat="item in subjects|limitTo :10  :0" href="#" class="list-group-item">
+    <div class="media">
+      <div class="media-left">
+          <img class="media-object" style="width:100px;" ng-src="{{item.images.small}}" alt="{{item.title}}">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{item.title}}  <span class="badge">{{item.rating.average}}</span></h4>
+        <p>上映时间：<strong>{{item.mainland_pubdate}}</strong> </p>
+        <p>导演：<strong ng-repeat="director in item.directors">{{director.name + ($last?'':'、')}}<!--<span ng-if="!$last">、</span>--></strong></p>
+        <p>类型：<strong>{{item.genres.join('、')}}</strong></p>
+        <p>主演：<strong ng-repeat="actor in item.casts">{{actor.name + ($last?'':'，')}}<!--<span ng-if="!$last">、</span>--></strong></p>
+      </div>
+    </div>
+  </a>
+
+  <div ng-show="!loading">
+    <nav>
+      <ul class="pager">
+        <li class="previous" ng-class="{disabled:currentPage<=1}" ><a ng-click="go(currentPage-1)"><span aria-hidden="true">&larr;</span> Pervious</a></li>
+        <li ng-class="{disabled:currentPage>=totalPages}" class="next"><a ng-click="go(currentPage+1)">Next <span aria-hidden="true">&rarr;</span></a></li>
+      </ul>
+    </nav>
+    <p>总共：{{totalCount}}条 当前第{{currentPage}}/{{totalPages}}页</p>
+  </div>
+
+  <span id="loading" ng-show="loading">
+    <div class="spinner">
+      <div class="cube1"></div>
+      <div class="cube2"></div>
+    </div>
+    <h1>{{message}}</h1>
+  </span>
+</div>
