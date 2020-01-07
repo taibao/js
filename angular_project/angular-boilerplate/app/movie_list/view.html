@@ -1,7 +1,7 @@
 <h1 class="page-header">{{title}}</h1>
 <div class="list-group">
   <!--显示3条从第0条开始-->
-  <a ng-repeat="item in subjects|limitTo :10  :0" href="#" class="list-group-item">
+  <a ng-repeat="item in subjects|limitTo :10  :0" href="#/detail/{{item.id}}" class="list-group-item">
     <div class="media">
       <div class="media-left">
           <img class="media-object" style="width:100px;" ng-src="{{item.images.small}}" alt="{{item.title}}">

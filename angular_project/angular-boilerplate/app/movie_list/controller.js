@@ -31,11 +31,12 @@
     $scope.totalPages = 0;
     $scope.loading = true; //开始加载
     $scope.currentPage = page;
-
+    $scope.input = '';
+    //$routeParams的数据来源 1：路由匹配出来的 2：？后面的参数
     var doubanApiAddress = 'https://douban.uieee.com/v2/movie/'+$routeParams.category;
     HttpService.jsonp(
       doubanApiAddress,
-      {count:count,start:start},
+      {count:count,start:start,q:$routeParams.q},
       function(res){
           if(res){
             $scope.subjects = res.subjects;

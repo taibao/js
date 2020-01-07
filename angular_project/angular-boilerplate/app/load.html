@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Load Js</title>
+  </head>
+  <body>
+    <!-- 异步加载js文件 -->
+    <script>
+        function $script(loads,callback){
+          var scriptElement = document.createElement('script');
+          scriptElement.src = loads;
+          document.head.appendChild(scriptElement);
+          //脚本加载完成后执行
+          scriptElement.addEventListener('load',callback);
+        }
+        $script('app.js',function(){
+          console.log(111);
+        })
+        $script([''],function(){
+
+        })
+    </script>
+  </body>
+</html>

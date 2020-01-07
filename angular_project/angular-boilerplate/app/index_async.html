@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>异步加载库</title>
+    <!-- load.js script.js head.js都可以帮助我们异步的方式加载JS-->
+    <script src="./bower_components/script.js/dist/script.js"></script>
+    <script src="./bower_components/angular-loader/angular-loader.js"></script>
+    <script>
+      // $script('./bower_components/jquery/dist/jquery.js',function(){
+      //   //加载完jquery文件之后才执行 (需要一定的时间)
+      //   console.log($);
+      // });
+
+      $script([
+        './bower_components/angular/angular.js',
+        './bower_components/angular-route/angular-route.js',
+        './movie_list/controller.js',
+        './components/http.js',
+        './components/version/auto-focus.js',
+        './app.js' //由于包较小，下载完直接执行，而其他依赖没有加载完，导致出错
+      ],function(){
+          angular.bootstrap(document,[
+            'moviecat'
+          ]);
+      })
+
+      //解决异步加载的依赖问题
+      // $script('./bower_components/angular/angular.js',
+      //   function(){
+      //     $script('./bower_components/angular-route/angular-route.js',
+      //       function(){
+      //         $script('./movie_list/controller.js',
+      //           function(){
+      //
+      //           });
+      //       });
+      // });
+      //angualr-loader的作用就是在使用一些异步加载脚本的库的时候，
+      //自动控制依赖顺序
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
