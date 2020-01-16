@@ -20,8 +20,9 @@
     '$route',
     '$routeParams',
     'HttpService',
-    function($scope,$route,$routeParams,HttpService) {
-    var count = 10;
+    'AppConfig',
+    function($scope,$route,$routeParams,HttpService,AppConfig) {
+    var count = AppConfig.pageSize;
     var page = parseInt($routeParams.page);
     var start = (page-1)*count;
     //控制器的编写 1：设计暴露数据 2：设计暴露行为
@@ -33,7 +34,7 @@
     $scope.currentPage = page;
     $scope.input = '';
     //$routeParams的数据来源 1：路由匹配出来的 2：？后面的参数
-    var doubanApiAddress = 'https://douban.uieee.com/v2/movie/'+$routeParams.category;
+    var doubanApiAddress = AppConfig.listApiAddress+$routeParams.category;
     HttpService.jsonp(
       doubanApiAddress,
       {count:count,start:start,q:$routeParams.q},

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./node_modules/seajs/dist/sea.js"></script>
+    <script>
+      //模块的引用必须使用相对路径的完整写法
+      //获取calculatorjs返回的对象
+      // seajs.use('./calculator.js',function(calculator){
+      //   //使用对象的暴露属性
+      //   var a=3,b=2;
+      //   console.log(calculator);
+      // })
+
+      seajs.config({
+        alias:{
+          //变化点封装
+          calc:'./modules/calc.js'
+        }
+      });
+
+      seajs.use('calc',function(calculator){
+        //使用对象的暴露属性
+
+      })
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

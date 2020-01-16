@@ -10,7 +10,7 @@
  //配置模块的路由
   module.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/detail/:id', {
-      templateUrl: 'movie_list/view.html',
+      templateUrl: 'movie_detail/view.html',
       controller: 'MovieDetailCtroller'
     });
   }])
@@ -20,13 +20,13 @@
     '$route',
     '$routeParams',
     'HttpService',
-    function($scope,$route,$routeParams,HttpService) {
+    'AppConfig',
+    function($scope,$route,$routeParams,HttpService,AppConfig) {
       //要显示数据首先要暴露数据
       $scope.movie = {};
       $scope.loading = true;
       var id = $routeParams.id;
-      var doubanApiAddress = 'https://douban.uieee.com/v2/movie/subject/'+id;
-
+      var doubanApiAddress = AppConfig.detailApiAddress+id;
       HttpService.jsonp(
         doubanApiAddress,
         {},
@@ -34,9 +34,7 @@
             if(res){
               $scope.movie = res;
               $scope.loading = false;
-              $scope.apply();
-            }else{
-              $scope.message = '获取数据错误';
+              $scope.$apply();
             }
       });
 
